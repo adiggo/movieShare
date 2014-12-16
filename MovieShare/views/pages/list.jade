@@ -1,0 +1,26 @@
+extends ../layout
+
+block content
+    .content
+        .row
+            table.table.table-hover.table-bordered
+                thead
+                    tr
+                        th movie name
+                        th director
+                        th country
+                        th year
+                        th lookup
+                        th update
+                        th delete
+                tbody
+                    each item in movies
+                    tr(class="item-id-#{item._id}")
+                        td #{item.title}
+                        td #{item.director}
+                        td #{item.country}
+                        td #{item.year}
+                        td #{moment(item.meta.createdAt).format('MM/DD/YYYY')}
+                        td: a(target="_blank", href="../movie/#{item_.id}") lookup
+                        td
+                            button.btn.btn-danger.del(type="button",data-id="#{item._id}") delete

@@ -1,0 +1,11 @@
+Use callback, we can achieve asynchrnous
+
+db.get("", callback(result){
+    console.log("a");
+}
+console.log("b");
+
+
+so in this case, b will be first printed, and then a.
+
+

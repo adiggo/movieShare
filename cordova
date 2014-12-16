@@ -1,0 +1,8 @@
+cordova.define("myplugin", function(require, exports, module){
+    var exec = require('cordova/exec');
+    var MyPlugin = function(){}
+    MyPlugin,prototype.foo = function(){
+    })
+});
+
+var mp = cordova.require("myplugin");
